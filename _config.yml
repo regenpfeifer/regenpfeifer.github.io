@@ -44,9 +44,11 @@ social:
 # webmaster_verifications:
 #   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
 
-# avatar on sidebar (supports local or CORS resources)
-# avatar: /assets/img/corey_goldberg.jpg
+# Eigene Links
+my_links:
+  - title: Portfolio
+    url: https://portfolio.de
+  - title: Github
+    url: https://github.com/meinname
 
-# global switch for TOC in posts (boolean)
-toc: false
-
+    
