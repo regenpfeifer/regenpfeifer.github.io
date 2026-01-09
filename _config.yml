@@ -14,33 +14,14 @@ timezone: Europe/Berlin
 # main title
 title: GitHub-Website von Regenpfeifer
 
-# subtitle
-tagline: Regenpfeifer
-
 # used by seo meta and the atom feed
 description: Übersicht
 
-# protocol & hostname for your site (it does not end with a '/')
-url: https://regenpfeifer.github.io
+# Logo / Bilddatei
+logo: /assets/img/avatar.png
 
-author:
-  name: Regenpfeifer
-  # sets the `author.url` property. helps Google to disambiguate the correct author of articles
-  # url: https://github.com/cgoldberg
-
-github:
-  username: regenpfeifer
-
-#twitter:
-#  username: cgoldberg
-
-social:
-  # displayed as the default author of the posts and the copyright owner in the footer
-  name: Regenpfeifer
-  #email: example@domain.com
-  links:
-    # first element serves as the copyright owner's link
-    - https://github.com/regenpfeifer
+# Downloads
+show_downloads: false
 
 # webmaster_verifications:
 #   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
