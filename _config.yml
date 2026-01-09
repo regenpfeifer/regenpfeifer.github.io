@@ -15,7 +15,7 @@ timezone: Europe/Berlin
 title: GitHub-Website von Regenpfeifer
 
 # used by seo meta and the atom feed
-description: Übersicht
+# description: Übersicht
 
 # Logo / Bilddatei
 logo: /assets/img/avatar.jpg
