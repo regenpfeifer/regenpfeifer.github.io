@@ -47,9 +47,11 @@ social:
 
 # Eigene Links
 my_links:
-  - title: Portfolio
-    url: https://portfolio.de
+  - title: Sudelbuch
+    url: https://regenpfeifer.net
+  - title: Microblog
+    url: https://social.regenpfeifer.net/@charadrius
   - title: Github
-    url: https://github.com/meinname
+    url: https://github.com/regenpfeifer
 
     
