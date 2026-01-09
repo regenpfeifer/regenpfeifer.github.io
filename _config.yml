@@ -1,6 +1,6 @@
 # site configuration
 
-theme: jekyll-theme-chirpy
+theme: jekyll-theme-primer
 # theme: jekyll-theme-minimal
 
 lang: de
