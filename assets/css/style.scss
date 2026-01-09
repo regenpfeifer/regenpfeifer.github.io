@@ -47,4 +47,9 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Source Serif 4', serif;
   font-weight: 700;
+
+/* Mehr Platz zwischen den Zeilen */
+p {
+  line-height: 1.6;
+}
 }
