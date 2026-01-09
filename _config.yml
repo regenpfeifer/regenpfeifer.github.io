@@ -14,10 +14,10 @@ timezone: Europe/Berlin
 title: GitHub-Website von Regenpfeifer
 
 # subtitle
-tagline: Blog
+tagline: Regenpfeifer
 
 # used by seo meta and the atom feed
-description: Blog by Regenpfeifer
+description: Übersicht
 
 # protocol & hostname for your site (it does not end with a '/')
 url: https://regenpfeifer.github.io
@@ -43,16 +43,6 @@ social:
 
 # webmaster_verifications:
 #   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
-
-# end of `jekyll-seo-tag` settings
-
-
-# color scheme setting
-# note: empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark
-# and light on the bottom left of the sidebar.
-# available options: light, dark
-theme_mode: dark
 
 # avatar on sidebar (supports local or CORS resources)
 # avatar: /assets/img/corey_goldberg.jpg
