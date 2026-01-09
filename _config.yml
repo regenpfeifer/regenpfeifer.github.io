@@ -23,9 +23,9 @@ description: Blog by Regenpfeifer
 url: https://regenpfeifer.github.io
 
 author:
-  name: Corey Goldberg
+  name: Regenpfeifer
   # sets the `author.url` property. helps Google to disambiguate the correct author of articles
-  url: https://github.com/cgoldberg
+  # url: https://github.com/cgoldberg
 
 github:
   username: regenpfeifer
@@ -39,7 +39,7 @@ social:
   #email: example@domain.com
   links:
     # first element serves as the copyright owner's link
-    - https://github.com/cgoldberg
+    - https://github.com/regenpfeifer
 
 # webmaster_verifications:
 #   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
