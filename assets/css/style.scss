@@ -1,1 +1,50 @@
+---
+---
+/* source-serif-4-regular - greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-serif-4-italic - greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-serif-4-700 - greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-serif-4-700italic - greek_latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
+/* Theme importieren */
+@import "{{ site.theme }}";
+
+/* 4. Die neue Schriftart dem gesamten Dokument zuweisen */
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 18px; /* Serifenschriften wirken oft etwas kleiner, 18px ist sehr leserlich */
+  color: #333;    /* Ein dunkles Grau ist oft angenehmer als tiefes Schwarz */
+}
+
+/* Überschriften können optional eine andere Schrift behalten oder auch Serif sein */
+h1, h2, h3, h4 {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 700;
+}
