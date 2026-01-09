@@ -20,6 +20,13 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <nav>
+
+          <ul>
+            {% for link in site.my_links %}
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+          
           <ul style="list-style: none; padding: 0;">
             <li><a href="https://deine-seite-1.de">Mein Portfolio</a></li>
             <li><a href="https://deine-seite-2.de">Mein Blog</a></li>
