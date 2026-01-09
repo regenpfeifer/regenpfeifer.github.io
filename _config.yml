@@ -1,7 +1,7 @@
 # site configuration
 
-# theme: jekyll-theme-chirpy
-theme: jekyll-theme-minimal
+theme: jekyll-theme-chirpy
+# theme: jekyll-theme-minimal
 
 lang: de
 
