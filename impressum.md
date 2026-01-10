@@ -7,10 +7,8 @@ title: Impressum
 
 **Angaben gemäß § 5 TMG:**
 
-Hermann Josef Eckl
-
-Am Essigberg 2
-
+Hermann Josef Eckl  
+Am Essigberg 2  
 94315 Straubing
 
 **Kontakt:**
