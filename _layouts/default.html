@@ -1,51 +1,94 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "de" }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO -->
     {% seo %}
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    
+    <!-- Preload kritische Fonts -->
+    <link rel="preload" href="{{ '/assets/fonts/source-serif-4-v14-greek_latin_latin-ext-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    
     {% include head-custom.html %}
   </head>
   <body>
     <div class="wrapper">
+      
+      <!-- HEADER / SIDEBAR -->
       <header>
-        <h1><a href="{{ "/" | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-          <img src="{{ site.logo | relative_url }}" alt="Logo" />
+        <div class="header-content">
+          {% if site.logo %}
+            <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} Logo" class="site-logo" />
+          {% endif %}
+          
+          <h1 class="site-title">
+            <a href="{{ "/" | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
+          </h1>
+          
+          {% if site.description %}
+            <p class="site-description">{{ site.description | default: site.github.project_tagline }}</p>
+          {% endif %}
+        </div>
+
+        <!-- NAVIGATION -->
+        {% if site.my_links %}
+          <nav class="main-nav" aria-label="Hauptnavigation">
+            <ul>
+              {% for link in site.my_links %}
+                <li>
+                  <a href="{{ link.url }}" {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                    {{ link.title }}
+                    {% if link.external %}<span class="external-icon" aria-label="Externer Link">↗</span>{% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
         {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        <nav>
-          <ul style="list-style: none; padding: 0;">
-            {% for link in site.my_links %}
-              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
+        <!-- Optional: GitHub Downloads -->
         {% if site.show_downloads %}
-          <ul class="downloads">
-            <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-            <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-          </ul>
+          <div class="downloads">
+            <h3>Downloads</h3>
+            <ul>
+              <li><a href="{{ site.github.zip_url }}">ZIP File</a></li>
+              <li><a href="{{ site.github.tar_url }}">TAR Ball</a></li>
+              <li><a href="{{ site.github.repository_url }}">GitHub Repository</a></li>
+            </ul>
+          </div>
         {% endif %}
       </header>
-      <section>
 
-      {{ content }}
+      <!-- MAIN CONTENT -->
+      <main role="main">
+        {{ content }}
+      </main>
 
-      </section>
+      <!-- FOOTER -->
       <footer>
-        <p>
+        <nav class="footer-nav" aria-label="Footer Navigation">
           <a href="{{ "/impressum" | relative_url }}">Impressum</a>
+          {% if site.datenschutz %}
+            <span class="separator">•</span>
+            <a href="{{ "/datenschutz" | relative_url }}">Datenschutz</a>
+          {% endif %}
+        </nav>
+        <p class="credits">
+          <small>
+            Erstellt mit <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a> 
+            &amp; <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+          </small>
         </p>
-        <p><small>GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
+
     </div>
+
+    <!-- Scripts -->
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
