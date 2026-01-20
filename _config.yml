@@ -45,9 +45,6 @@ my_links:
   - title: Bücherfreund
     url: https://books.regenpfeifer.net/user/charadrius
     external: true
-  - title: GitHub
-    url: https://github.com/regenpfeifer
-    external: true
 
 # ============================================
 # FEATURES
