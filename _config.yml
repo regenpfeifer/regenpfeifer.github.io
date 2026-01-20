@@ -14,10 +14,10 @@ timezone: Europe/Berlin
 # ============================================
 
 # Haupttitel
-title: GitHub-Website von Regenpfeifer
+title: Code-Sudelbuch von Regenpfeifer
 
 # Beschreibung für SEO und Feeds
-description: Persönliche Übersichtsseite – Links zu meinen Projekten und Webseiten
+description: Die persönliche GitHub-Website des Regenpfeifers
 
 # Logo / Avatar
 logo: /assets/img/avatar.jpg
@@ -36,8 +36,14 @@ my_links:
   - title: Sudelbuch
     url: https://regenpfeifer.net
     external: true
-  - title: Microblog
+  - title: Telegrafenamt
     url: https://social.regenpfeifer.net/@charadrius
+    external: true
+  - title: Lichtbildarchiv
+    url: https://pics.regenpfeifer.net/@charadrius
+    external: true
+  - title: Bücherfreund
+    url: https://books.regenpfeifer.net/user/charadrius
     external: true
   - title: GitHub
     url: https://github.com/regenpfeifer
