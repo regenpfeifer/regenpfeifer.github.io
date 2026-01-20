@@ -14,10 +14,10 @@ timezone: Europe/Berlin
 # ============================================
 
 # Haupttitel
-title: Code-Sudelbuch von Regenpfeifer
+title: Rechenheft
 
 # Beschreibung für SEO und Feeds
-description: Die persönliche GitHub-Website des Regenpfeifers
+description: Die GitHub-Website des Regenpfeifers
 
 # Logo / Avatar
 logo: /assets/img/avatar.jpg
