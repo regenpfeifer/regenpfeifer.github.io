@@ -1,38 +1,89 @@
-# site configuration
+# ============================================
+# SITE CONFIGURATION
+# ============================================
 
-# theme: jekyll-theme-gitbook
+# Theme
 theme: jekyll-theme-minimal
 
-# Sprache
+# Sprache & Zeitzone
 lang: de-DE
-
-# https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Europe/Berlin
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ============================================
+# SEO & META
+# ============================================
 
-# main title
+# Haupttitel
 title: GitHub-Website von Regenpfeifer
 
-# used by seo meta and the atom feed
-# description: Übersicht
+# Beschreibung für SEO und Feeds
+description: Persönliche Übersichtsseite – Links zu meinen Projekten und Webseiten
 
-# Logo / Bilddatei
+# Logo / Avatar
 logo: /assets/img/avatar.jpg
 
-# Downloads
-show_downloads: false
+# Autor (optional, gut für SEO)
+author:
+  name: Regenpfeifer
+  # email: deine@email.de  # optional
 
-# webmaster_verifications:
-#   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
+# ============================================
+# NAVIGATION & LINKS
+# ============================================
 
-# Eigene Links
+# Eigene Links in der Sidebar
 my_links:
   - title: Sudelbuch
     url: https://regenpfeifer.net
+    external: true
   - title: Microblog
     url: https://social.regenpfeifer.net/@charadrius
-  - title: Github
+    external: true
+  - title: GitHub
     url: https://github.com/regenpfeifer
+    external: true
 
-    
+# ============================================
+# FEATURES
+# ============================================
+
+# GitHub Downloads ausblenden
+show_downloads: false
+
+# Datenschutz-Seite vorhanden? (für Footer-Link)
+datenschutz: false  # auf true setzen, wenn du /datenschutz.md erstellst
+
+# ============================================
+# PLUGINS (optional)
+# ============================================
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap  # Erstellt automatisch sitemap.xml
+
+# ============================================
+# WEBMASTER TOOLS (optional)
+# ============================================
+
+# Auskommentiert lassen, wenn nicht benötigt
+# webmaster_verifications:
+#   google: U9-hCLAR44wY-5vEZSfl8iVgClFj5L0nuUgP8pdl2xo
+
+# ============================================
+# BUILD SETTINGS
+# ============================================
+
+# Markdown-Engine (Standard)
+markdown: kramdown
+
+# Ausgeschlossene Dateien beim Build
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Permalink-Struktur (für eventuelle Blog-Posts)
+# permalink: /:categories/:year/:month/:day/:title/
