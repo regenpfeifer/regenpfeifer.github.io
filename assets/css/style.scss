@@ -231,7 +231,7 @@ table {
   display: grid;
   grid-template-columns: 280px 1fr;
   grid-template-rows: auto 1fr auto;
-  gap: 2rem;
+  gap: 3rem;
   min-height: 100vh;
   
   @media (max-width: 768px) {
