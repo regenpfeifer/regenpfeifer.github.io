@@ -230,13 +230,15 @@ table {
   padding: 2rem;
   display: grid;
   grid-template-columns: 280px 1fr;
-  grid-template-rows: auto 1fr auto;
+  /* Ändere die Zeilen-Definition auf 'auto', 
+     damit sich die Höhe nach dem Inhalt richtet */
+  grid-template-rows: auto; 
+  align-items: start; /* WICHTIG: Verhindert das Strecken der Spalten */
   gap: 3rem;
-  min-height: 100vh;
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    display: block; /* Fallback für Mobile */
   }
 }
 
@@ -244,19 +246,23 @@ table {
    HEADER / SIDEBAR
    ============================================ */
 header {
-  grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1; /* Festlegen auf die erste Zeile parallel zum Content */
   background-color: var(--bg-secondary);
   padding: 2rem;
   border-radius: 8px;
-  height: fit-content;
   position: sticky;
   top: 2rem;
+  height: auto;
+  max-height: calc(100vh - 4rem); 
+  overflow-y: auto;
   border-bottom: none;
   
   @media (max-width: 768px) {
     position: relative;
     top: 0;
     grid-row: auto;
+    max-height: none;
   }
 }
 
@@ -372,6 +378,7 @@ header {
    ============================================ */
 main {
   grid-column: 2;
+  grid-row: 1; /* Main startet in der gleichen Zeile wie der Header */
   background-color: var(--bg-primary);
   padding: 2rem;
   border-radius: 8px;
@@ -387,6 +394,7 @@ main {
    ============================================ */
 footer {
   grid-column: 2;
+  grid-row: 2; /* Footer unter den Content */
   padding: 1.5rem 2rem;
   text-align: center;
   color: var(--text-muted);
