@@ -9,4 +9,4 @@ Der »[Regenpfeifer](https://regenpfeifer.net/kontakt)« ist aktiv hauptsächlic
 
 ## GitHub
 
-Auf GitHub ist der »Regenpfeifer« [hier](https://github.com/regenpfeifer) zu finden. Bislang sind alle seine eigenen Repositories privat und nicht für die Öffentlichkeit bestimmt.Er beteiligt sich aber gelegentlich an Projekten anderer Entwickler.
+Auf GitHub ist der »Regenpfeifer« [hier ↗](https://github.com/regenpfeifer) zu finden. Bislang sind alle seine eigenen Repositories privat und nicht für die Öffentlichkeit bestimmt.Er beteiligt sich aber gelegentlich an Projekten anderer Entwickler.
