@@ -13,158 +13,134 @@ permalink: /links/
     <title>Links | {{ site.title }}</title>
 
 	<style>
+		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&display=swap");
+
 		/* 1. VARIABLEN */
 		:root {
-			--bg-primary: #ECEFF4;
-			--bg-secondary: #E5E9F0;
-			--bg-tertiary: #D8DEE9;
-			--text-primary: #2E3440;
-			--text-secondary: #3B4252;
-			--text-muted: #4C566A;
-			--accent-frost: #5E81AC;
-			--link-color: #5E81AC;
-			--link-hover: #81A1C1;
+		  --bg-primary: #eceff4;
+		  --bg-secondary: #e5e9f0;
+		  --bg-tertiary: #d8dee9;
+		  --text-primary: #2e3440;
+		  --text-secondary: #3b4252;
+		  --text-muted: #4c566a;
+		  --accent-frost: #5e81ac;
+		  --link-color: #5e81ac;
+		  --link-hover: #81a1c1;
 		}
 
 		@media (prefers-color-scheme: dark) {
-			:root {
-				--bg-primary: #2E3440;
-				--bg-secondary: #3B4252;
-				--bg-tertiary: #434C5E;
-				--text-primary: #ECEFF4;
-				--text-secondary: #E5E9F0;
-				--text-muted: #D8DEE9;
-				--accent-frost: #88C0D0;
-				--link-color: #88C0D0;
-				--link-hover: #8FBCBB;
-			}
+		  :root {
+			--bg-primary: #2e3440;
+			--bg-secondary: #3b4252;
+			--bg-tertiary: #434c5e;
+			--text-primary: #eceff4;
+			--text-secondary: #e5e9f0;
+			--text-muted: #d8dee9;
+			--accent-frost: #88c0d0;
+			--link-color: #88c0d0;
+			--link-hover: #8fbcbb;
+		  }
 		}
 
 		/* 2. BASE STYLES */
 		body {
-			font-family: 'Source Serif 4', Georgia, serif;
-			background-color: var(--bg-primary);
-			color: var(--text-primary);
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			padding: 40px 20px;
-			transition: background-color 0.3s ease;
+		  font-family: "Literata", serif; /* Hauptschriftart */
+		  background-color: var(--bg-primary);
+		  color: var(--text-primary);
+		  margin: 0;
+		  display: flex;
+		  justify-content: center;
+		  padding: 40px 20px;
+		  transition: background-color 0.3s ease;
 		}
 
 		.container {
-			width: 100%;
-			max-width: 450px;
-			text-align: center;
-		}
-
-		.profile-pic {
-			width: 90px;
-			height: 90px;
-			border-radius: 50%;
-			border: 3px solid var(--accent-frost);
-			margin-bottom: 1rem;
-			object-fit: cover;
+		  width: 100%;
+		  max-width: 450px;
+		  text-align: center;
 		}
 
 		h1 {
-			font-size: 1.5rem;
-			margin-bottom: 0.5rem;
-			color: var(--text-primary);
+		  font-family: "Literata", serif;
+		  font-weight: 700;
+		  font-size: 1.6rem;
+		  margin-bottom: 0.5rem;
 		}
 
-		.description {
-			color: var(--text-secondary);
-			font-size: 0.95rem;
-			margin-bottom: 2rem;
-		}
-
-		/* 3. ANIMATION (Jetzt mit korrekten Klammern) */
-		@keyframes fadeIn {
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-
-		/* 4. LINKS und BUTTONS */
+		/* 3. BUTTONS & TYPOGRAFIE */
 		.links-container {
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
+		  display: flex;
+		  flex-direction: column;
+		  gap: 12px;
 		}
 
 		.link-card {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: var(--bg-secondary);
-			color: var(--text-primary);
-			text-decoration: none;
-			padding: 16px;
-			border-radius: 8px;
-			font-weight: 700;
-			border: 1px solid var(--bg-tertiary);
-			transition: all 0.2s ease;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center; /* Zentriert die Gruppe aus Icon + Text */
+		  background-color: var(--bg-secondary);
+		  color: var(--text-primary);
+		  text-decoration: none;
+		  padding: 16px;
+		  border-radius: 8px;
+		  border: 1px solid var(--bg-tertiary);
+		  transition: all 0.2s ease;
 
-			/* Startzustand für Animation */
-			opacity: 0;
-			transform: translateY(10px);
-			animation: fadeIn 0.5s forwards;
-		}
-
-		.link-card:hover {
-			background-color: var(--bg-tertiary);
-			border-color: var(--accent-frost);
-			transform: scale(1.02);
-			color: var(--link-color);
-		}
-
-		.link-icon {
-			width: 20px;
-			height: 20px;
-			margin-right: 12px;
-			flex-shrink: 0;
-			object-fit: contain;
-			/* Der Filter färbt die Icons ein. */
-			filter: invert(48%) sepia(18%) saturate(1185%) hue-rotate(177deg) brightness(93%) contrast(90%);
-			transition: filter 0.3s ease; /* Weicher Übergang beim Modus-Wechsel */
-		}
-
-		@media (prefers-color-scheme: dark) {
-			.link-icon {
-				/* Dieser Filter wandelt schwarz/dunkel in das hellere Nord8 (#88C0D0) um */
-				filter: invert(76%) sepia(13%) saturate(913%) hue-rotate(149deg) brightness(92%) contrast(88%);
-			}
+		  opacity: 0;
+		  transform: translateY(10px);
+		  animation: fadeIn 0.5s forwards;
 		}
 
 		.link-text {
-			flex-grow: 0;
-			text-align: center;
-
-			/* SCHRIFT-STYLING */
-			text-transform: uppercase; /* Alles in Großbuchstaben */
-			font-variant: small-caps;   /* Echte Kapitälchen (wenn vom Font unterstützt) */
-			letter-spacing: 0.12em;     /* WICHTIG: Erhöhter Laufweite für bessere Lesbarkeit bei Großbuchstaben */
-			font-weight: 700;
+		  font-family: "IBM Plex Sans", sans-serif; /* Button-Schriftart */
+		  text-transform: uppercase;
+		  font-variant: small-caps;
+		  letter-spacing: 0.1em;
+		  font-weight: 700;
+		  font-size: 0.95rem;
 		}
 
-		/* 5. FOOTER */
+		.link-icon {
+		  width: 20px;
+		  height: 20px;
+		  margin-right: 12px;
+		  flex-shrink: 0;
+		  object-fit: contain;
+		  /* Nord-Filter */
+		  filter: invert(48%) sepia(18%) saturate(1185%) hue-rotate(177deg)
+			brightness(93%) contrast(90%);
+		}
+
+		@media (prefers-color-scheme: dark) {
+		  .link-icon {
+			filter: invert(76%) sepia(13%) saturate(913%) hue-rotate(149deg)
+			  brightness(92%) contrast(88%);
+		  }
+		}
+
+		.link-card:hover {
+		  background-color: var(--bg-tertiary);
+		  border-color: var(--accent-frost);
+		  transform: scale(1.02);
+		}
+
+		/* ANIMATION & FOOTER */
+		@keyframes fadeIn {
+		  to {
+			opacity: 1;
+			transform: translateY(0);
+		  }
+		}
+
 		footer {
-			margin-top: 3rem;
-			font-size: 0.85rem;
-			color: var(--text-muted);
+		  margin-top: 3rem;
+		  font-size: 0.85rem;
+		  color: var(--text-muted);
 		}
-
 		footer a {
-			color: var(--text-secondary);
-			text-decoration: none;
-			margin: 0 8px;
-		}
-
-		footer a:hover {
-			color: var(--accent-frost);
-			text-decoration: underline;
+		  color: var(--text-secondary);
+		  text-decoration: none;
+		  margin: 0 8px;
 		}
 	</style>
 </head>
