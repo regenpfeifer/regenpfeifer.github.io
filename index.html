@@ -183,10 +183,11 @@ permalink: /
 			{% for link in site.data.links %}
 				<a href="{{ link.url }}"
 				   class="link-card"
+				   target="_blank"
 				   style="animation-delay: {{ forloop.index | times: 0.1 }}s; border-left: 4px solid {{ link.color | default: 'var(--accent-frost)' }};">
 
 					{% if link.icon %}
-						<img src="{{ link.icon | relative_url }}" alt="" target="_blank" class="link-icon">
+						<img src="{{ link.icon | relative_url }}" alt="" class="link-icon">
 					{% endif %}
 
 					<span class="link-text">{{ link.name }}</span>
