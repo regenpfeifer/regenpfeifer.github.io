@@ -157,3 +157,38 @@ footer a {
   text-decoration: none;
   margin: 0 8px;
 }
+
+/* 4. QR-CODE */
+.qr-section {
+    margin-top: 2.5rem;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px dashed var(--bg-tertiary);
+    display: inline-block;
+}
+
+.qr-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.qr-code {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    /* Im Dark Mode invertieren wir den Code leicht für bessere Lesbarkeit */
+}
+
+@media (prefers-color-scheme: dark) {
+    .qr-section {
+        background-color: var(--bg-tertiary);
+    }
+    .qr-code {
+        border: 8px solid white; /* Weißer Rand hilft Scannern im Dark Mode */
+    }
+}

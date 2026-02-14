@@ -1,3 +1,11 @@
+# Metadaten für dieses spezifische Profil
+metadata:
+  title: "Linkskatholisch"
+  description: "Vogelbeobachtung in Bayern und Umgebung. 🌿"
+  logo: "/assets/img/linkskatholisch.jpg"
+
+# Links
+links:
 - name: "Texte"
   url: "https://linkskatholisch.de"
   icon: "/assets/icons/home02.svg"
