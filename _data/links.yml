@@ -1,0 +1,9 @@
+- name: "Mein Portfolio"
+  url: "https://deinname.de"
+  color: "#ff5733" # Optional: Eigene Farbe pro Button
+- name: "Instagram"
+  url: "https://instagram.com/deinname"
+- name: "Neuester Blogpost"
+  url: "/blog/mein-artikel"
+- name: "Kontakt"
+  url: "mailto:hallo@domain.de"
