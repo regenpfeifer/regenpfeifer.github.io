@@ -1,27 +1,24 @@
+# Metadaten für dieses spezifische Profil
+metadata:
+  title: "Bavarianbirds"
+  description: "Vogelbeobachtung in Bayern und Umgebung. 🌿"
+  logo: "/assets/img/bavarianbirds-logo.png"
+
+# Link-Liste
 - name: "Blog"
-  url: "https://regenpfeifer.net"
+  url: "https://regenpfeifer.net/natur"
   icon: "/assets/icons/home02.svg"
   color: "#EBCB8B" # Nord13 (Gelb)
 
 - name: "Kurznachrichten"
-  url: "https://social.regenpfeifer.net/@charadrius"
+  url: "https://social.regenpfeifer.net/@bavarianbirds"
   icon: "/assets/icons/mastodon02.svg"
   color: "#B48EAD" # Nord15 (Violett)
 
 - name: "Fotos"
-  url: "https://pics.regenpfeifer.net/@charadrius"
+  url: "https://pics.regenpfeifer.net/@bavarianbirds"
   icon: "/assets/icons/pixelfed02.svg"
   color: "#88C0D0" # Nord8 (Türkis)
-
-- name: "Bücher"
-  url: "https://books.regenpfeifer.net/user/charadrius"
-  icon: "/assets/icons/bookwyrm.svg"
-  color: "#BF616A" # Nord11 (Rötlich)
-
-- name: "Kontakt"
-  url: "mailto:hermannjosef.eckl@gmail.com"
-  icon: "/assets/icons/ebird.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
 
 - name: "eBird"
   url: "https://regenpfeifer.net/ebird"
@@ -31,4 +28,9 @@
 - name: "iNaturalist"
   url: "https://regenpfeifer.net/inaturalist"
   icon: "/assets/icons/inaturalist02.svg"
+  color: "#A3BE8C" # Nord14 (Grünlich)
+
+  - name: "Kontakt"
+  url: "mailto:bavarianbirds@gmail.com"
+  icon: "/assets/icons/ebird.svg"
   color: "#A3BE8C" # Nord14 (Grünlich)

@@ -1,6 +1,8 @@
 ---
 layout: null
-permalink: /
+permalink: /bavarianbirds/
+title: "Bavarianbirds | Linktree"
+description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufenthalten draußen in der Natur""
 ---
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "de" }}">
@@ -17,16 +19,23 @@ permalink: /
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="/favicon.png?">
     <!-- Verifizierung -->
-    <link rel="me" href="https://social.regenpfeifer.net/@charadrius">
+    <link rel="me" href="https://social.regenpfeifer.net/@bavarianbirds">
 
-    <title>Linktree | {{ site.title }}</title>
+    <title>Linktree | {{ profile.metadata.title }}</title>
+
+    <style>
+    :root {
+        --accent-frost: #A3BE8C; /* Ein schönes Nord-Grün für die Vögel */
+        --link-color: #A3BE8C;
+    }
+	</style>
 </head>
 
 <body>
-    <div class="container">
-        <img src="{{ site.logo | relative_url }}" alt="Logo" class="profile-pic">
-        <h1>{{ site.title }}</h1>
-        <p class="description">{{ site.description }}</p>
+<div class="container">
+    <img src="{{ profile.metadata.logo | default: site.logo | relative_url }}" alt="Logo" class="profile-pic">
+    <h1>{{ profile.metadata.title | default: site.title }}</h1>
+    <p class="description">{{ profile.metadata.description | default: site.description }}</p>
 
 		<div class="links-container">
 			{% for link in site.data.links %}
