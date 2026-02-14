@@ -3,16 +3,23 @@ layout: null
 permalink: /
 ---
 <!DOCTYPE html>
-<html lang="de">
+<html lang="{{ site.lang | default: "de" }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" type="image/png" href="/favicon.png?">
+    <!-- SEO -->
+    {% seo %}
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ "/assets/css/linktree.css?v=" | append: site.github.build_revision | relative_url }}">
 
     <title>Links | {{ site.title }}</title>
 
-	<style>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png?">
+
+<!--	<style>
 		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&display=swap");
 
 		/* 1. VARIABLEN */
@@ -162,7 +169,7 @@ permalink: /
 		  text-decoration: none;
 		  margin: 0 8px;
 		}
-	</style>
+	</style>  -->
 </head>
 
 <body>
@@ -179,7 +186,7 @@ permalink: /
 				   style="animation-delay: {{ forloop.index | times: 0.1 }}s; border-left: 4px solid {{ link.color | default: 'var(--accent-frost)' }};">
 
 					{% if link.icon %}
-						<img src="{{ link.icon | relative_url }}" alt="" class="link-icon">
+						<img src="{{ link.icon | relative_url }}" alt="" target="_blank" class="link-icon">
 					{% endif %}
 
 					<span class="link-text">{{ link.name }}</span>
