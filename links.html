@@ -78,6 +78,11 @@ permalink: /links/
         }
 
         /* 3. BUTTONS (Nord-Style) */
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+
         .links-container {
             display: flex;
             flex-direction: column;
@@ -85,19 +90,23 @@ permalink: /links/
         }
 
         .link-card {
-            background-color: var(--bg-secondary);
-            color: var(--text-primary);
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 8px;
-            font-weight: 700;
-            border: 1px solid var(--bg-tertiary);
-            transition: all 0.2s ease;
+			/* Flexbox für Icon und Text nebeneinander */
+			display: flex;
+			align-items: center; /* Zentriert Icon und Text vertikal */
+			background-color: var(--bg-secondary);
+			color: var(--text-primary);
+			text-decoration: none;
+			padding: 16px;
+			/* padding: 12px 16px; */     /* Etwas kompakteres Padding */
+			border-radius: 8px;
+			font-weight: 700;
+			border: 1px solid var(--bg-tertiary);
+			transition: all 0.2s ease;
 
-            /* Animation-Startzustand */
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeIn 0.5s forwards;
+			/* Animation-Startzustand */
+			opacity: 0;
+			transform: translateY(10px);
+			animation: fadeIn 0.5s forwards;
         }
 
         .link-card:hover {
@@ -106,6 +115,32 @@ permalink: /links/
             transform: scale(1.02);
             color: var(--link-color);
         }
+
+        .link-icon {
+			/* Feste Größe für alle Icons */
+			width: 24px;
+			height: 24px;
+
+			/* Verhindert Verzerrungen */
+			object-fit: contain;
+
+			/* Abstand zum Text */
+			margin-right: 16px;
+
+			/* Optional: Stellt sicher, dass das Icon nicht schrumpft */
+			flex-shrink: 0;
+
+			object-fit: contain;    /* Verhindert Verzerrungen */
+			/* Falls du SVGs nutzt, kannst du sie hier leicht filtern,
+			um sie an das Nord-Design anzupassen, falls nötig */
+			filter: brightness(0) saturate(100%) invert(20%) sepia(10%) saturate(1000%) hue-rotate(180deg);
+		}
+
+		.link-text {
+			flex-grow: 1;           /* Der Text nimmt den restlichen Platz ein */
+			text-align: left;       /* Text linksbündig für besseren Lesefluss */
+		}
+
 
         /* 4. FOOTER */
         footer {
@@ -124,40 +159,7 @@ permalink: /links/
             text-decoration: underline;
         }
 
-        /* ANIMATION */
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-
-		.link-card {
-			display: flex;          /* Aktiviert Flexbox */
-			align-items: center;    /* Zentriert Icon und Text vertikal */
-			padding: 12px 16px;     /* Etwas kompakteres Padding */
-			background-color: var(--bg-secondary);
-			color: var(--text-primary);
-			text-decoration: none;
-			border-radius: 12px;
-			border: 1px solid var(--bg-tertiary);
-			transition: all 0.2s ease;
-
-			opacity: 0;
-			transform: translateY(10px);
-			animation: fadeIn 0.5s forwards;
-		}
-
-		.link-icon {
-			width: 24px;            /* Feste Größe für die Icons */
-			height: 24px;
-			margin-right: 16px;     /* Abstand zum Text */
-			object-fit: contain;    /* Verhindert Verzerrungen */
-			/* Falls du SVGs nutzt, kannst du sie hier leicht filtern,
-			   um sie an das Nord-Design anzupassen, falls nötig */
-		}
-
-		.link-text {
-			flex-grow: 1;           /* Der Text nimmt den restlichen Platz ein */
-			text-align: left;       /* Text linksbündig für besseren Lesefluss */
-		}
-    }
+   }
     </style>
 
 </head>
