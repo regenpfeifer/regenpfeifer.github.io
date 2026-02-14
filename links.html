@@ -60,6 +60,26 @@ permalink: /links/
 		  text-align: center;
 		}
 
+		/* Ergänzung für Logo und Beschreibung */
+		.profile-pic {
+			width: 120px;          /* Festgelegte Breite */
+			height: 120px;         /* Festgelegte Höhe */
+			border-radius: 50%;    /* Macht das Bild rund */
+			object-fit: cover;     /* Sorgt dafür, dass das Bild nicht verzerrt wird */
+			border: 3px solid var(--accent-frost); /* Der blaue Nord-Rahmen */
+			margin-bottom: 1.5rem;
+			margin-top: 1rem;
+		}
+
+		.description {
+			font-family: 'Literata', serif;
+			color: var(--text-secondary);
+			font-size: 1rem;
+			margin-bottom: 2.5rem;
+			font-style: italic;    /* Passt gut zum Literata-Stil */
+			line-height: 1.4;
+		}
+
 		h1 {
 		  font-family: "Literata", serif;
 		  font-weight: 700;
