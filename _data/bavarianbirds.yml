@@ -4,33 +4,34 @@ metadata:
   description: "Vogelbeobachtung in Bayern und Umgebung. 🌿"
   logo: "/assets/img/bavarianbirds.jpg"
 
-# Link-Liste
-- name: "Blog"
-  url: "https://regenpfeifer.net/natur"
-  icon: "/assets/icons/home02.svg"
-  color: "#EBCB8B" # Nord13 (Gelb)
+# Links
+links:
+  - name: "Blog"
+    url: "https://regenpfeifer.net/natur"
+    icon: "/assets/icons/home02.svg"
+    color: "#EBCB8B"
 
-- name: "Kurznachrichten"
-  url: "https://social.regenpfeifer.net/@bavarianbirds"
-  icon: "/assets/icons/mastodon02.svg"
-  color: "#B48EAD" # Nord15 (Violett)
+  - name: "Kurznachrichten"
+    url: "https://social.regenpfeifer.net/@bavarianbirds"
+    icon: "/assets/icons/mastodon02.svg"
+    color: "#B48EAD"
 
-- name: "Fotos"
-  url: "https://pics.regenpfeifer.net/@bavarianbirds"
-  icon: "/assets/icons/pixelfed02.svg"
-  color: "#88C0D0" # Nord8 (Türkis)
+  - name: "Fotos"
+    url: "https://pics.regenpfeifer.net/@bavarianbirds"
+    icon: "/assets/icons/pixelfed02.svg"
+    color: "#88C0D0"
 
-- name: "eBird"
-  url: "https://regenpfeifer.net/ebird"
-  icon: "/assets/icons/ebird.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
+  - name: "eBird"
+    url: "https://regenpfeifer.net/ebird"
+    icon: "/assets/icons/ebird.svg"
+    color: "#A3BE8C"
 
-- name: "iNaturalist"
-  url: "https://regenpfeifer.net/inaturalist"
-  icon: "/assets/icons/inaturalist02.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
+  - name: "iNaturalist"
+    url: "https://regenpfeifer.net/inaturalist"
+    icon: "/assets/icons/inaturalist02.svg"
+    color: "#A3BE8C"
 
   - name: "Kontakt"
-  url: "mailto:bavarianbirds@gmail.com"
-  icon: "/assets/icons/ebird.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
+    url: "mailto:bavarianbirds@gmail.com"
+    icon: "/assets/icons/ebird.svg"
+    color: "#A3BE8C"
