@@ -2,44 +2,10 @@
 ---
 
 /* ============================================
-   FONT FACES - Source Serif 4
-   ============================================ */
-@font-face {
-  font-display: swap;
-  font-family: 'Source Serif 4';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Source Serif 4';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Source Serif 4';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-700.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Source Serif 4';
-  font-style: italic;
-  font-weight: 700;
-  src: url('../fonts/source-serif-4-v14-greek_latin_latin-ext-700italic.woff2') format('woff2');
-}
-
-/* ============================================
    THEME IMPORT
    ============================================ */
 @import "{{ site.theme }}";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&display=swap");
 
 /* ============================================
    NORD COLOR PALETTE
@@ -90,7 +56,7 @@
    BASE STYLES
    ============================================ */
 body {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Literata', Georgia, serif;
   font-size: 18px;
   line-height: 1.6;
   background-color: var(--bg-primary);
@@ -102,7 +68,7 @@ body {
    TYPOGRAPHY
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Literata', serif;
   font-weight: 700;
   color: var(--text-primary);
   transition: color 0.3s ease;
