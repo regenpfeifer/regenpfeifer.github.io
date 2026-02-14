@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:Eckl;Hermann Josef;;;Hermann Josef Eckl
+FN;CHARSET=UTF-8: Hermann Josef Eckl
+ORG;CHARSET=UTF-8:Kath. Klinikseelsorge BK Mainkofen
+TITLE;CHARSET=UTF-8:Klinikpfarrer, Lehrbeauftragter am Department Kath. Theologie, Universität Passau
+URL;WORK:https://linkskatholisch.de
+EMAIL;type=WORK;type=PREF:linkskatholisch@gmail.com
+ADR;CHARSET=UTF-8;WORK;type=pref:;;Mainkofen Haus B2;Deggendorf;;94469;Deutschland
+LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:Mainkofen Haus B2=0D=0A=
+94469 Deggendorf Deutschland
+REV:2026-02-14T22:31:26+01:00
+END:VCARD

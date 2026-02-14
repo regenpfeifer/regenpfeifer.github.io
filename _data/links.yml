@@ -18,17 +18,7 @@
   icon: "/assets/icons/bookwyrm.svg"
   color: "#BF616A" # Nord11 (Rötlich)
 
-- name: "Kontakt"
-  url: "mailto:hermannjosef.eckl@gmail.com"
-  icon: "/assets/icons/ebird.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
-
-- name: "eBird"
-  url: "https://regenpfeifer.net/ebird"
-  icon: "/assets/icons/ebird.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
-
-- name: "iNaturalist"
-  url: "https://regenpfeifer.net/inaturalist"
-  icon: "/assets/icons/inaturalist02.svg"
-  color: "#A3BE8C" # Nord14 (Grünlich)
+- name: "Kontakt speichern"
+  url: "/assets/vcard/regenpfeifer.vcf"
+  icon: "/assets/icons/contact.svg"
+  color: "#BF616A" # Nord11 (Rötlich)

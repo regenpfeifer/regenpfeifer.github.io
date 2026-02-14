@@ -42,7 +42,7 @@ description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufent
 				<a href="{{ link.url }}"
 				   class="link-card"
 				   target="_blank"
-				   rel="noopener"
+				   {% if link.url contains '.vcf' %} download {% else %} target="_blank" rel="noopener" {% endif %}
 				   style="animation-delay: {{ forloop.index | times: 0.1 }}s; border-left: 4px solid {{ link.color | default: 'var(--accent-frost)' }};">
 
 					{% if link.icon %}
@@ -52,6 +52,12 @@ description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufent
 					<span class="link-text">{{ link.name }}</span>
 				</a>
 			{% endfor %}
+		</div>
+
+		<div class="qr-section">
+			<p class="qr-text">Scan mich für meine Kontakte</p>
+			<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.url }}{{ page.url }}&color=2E3440&bgcolor=ECEFF4"
+				 alt="QR Code" class="qr-code">
 		</div>
 
         <footer>

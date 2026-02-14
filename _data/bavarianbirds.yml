@@ -14,12 +14,12 @@ links:
   - name: "Kurznachrichten"
     url: "https://social.regenpfeifer.net/@bavarianbirds"
     icon: "/assets/icons/mastodon02.svg"
-    color: "#B48EAD"
+    color: "#B48EAD" # Nord15 (Violett)
 
   - name: "Fotos"
     url: "https://pics.regenpfeifer.net/@bavarianbirds"
     icon: "/assets/icons/pixelfed02.svg"
-    color: "#88C0D0"
+    ccolor: "#88C0D0" # Nord8 (Türkis)
 
   - name: "eBird"
     url: "https://regenpfeifer.net/ebird"
@@ -31,7 +31,7 @@ links:
     icon: "/assets/icons/inaturalist02.svg"
     color: "#A3BE8C"
 
-  - name: "Kontakt"
-    url: "mailto:bavarianbirds@gmail.com"
-    icon: "/assets/icons/ebird.svg"
-    color: "#A3BE8C"
+  - name: "Kontakt speichern"
+    url: "/assets/vcard/bavarianbirds.vcf"
+    icon: "/assets/icons/contact.svg"
+    color: "#BF616A" # Nord11 (Rötlich)
