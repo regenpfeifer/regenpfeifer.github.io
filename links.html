@@ -2,7 +2,6 @@
 layout: null
 permalink: /links/
 ---
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -10,98 +9,149 @@ permalink: /links/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links | {{ site.title }}</title>
 
-    <meta property="og:title" content="Linktree | {{ site.title }}">
-	<meta property="og:description" content="Alle meine wichtigen Links auf einen Blick.">
-	<meta property="og:image" content="URL_ZU_DEINEM_PROFILBILD">
-	<meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 1. VARIABLEN (Direkt aus deiner style.scss übernommen) */
+        :root {
+            --bg-primary: #ECEFF4;
+            --bg-secondary: #E5E9F0;
+            --bg-tertiary: #D8DEE9;
+            --text-primary: #2E3440;
+            --text-secondary: #3B4252;
+            --accent-frost: #5E81AC;
+            --link-color: #5E81AC;
+            --link-hover: #81A1C1;
+        }
 
-	<style>
-		:root {
-			--bg-color: #0f172a; /* Dunkler, moderner Hintergrund */
-			--text-color: #ffffff;
-		}
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #2E3440;
+                --bg-secondary: #3B4252;
+                --bg-tertiary: #434C5E;
+                --text-primary: #ECEFF4;
+                --text-secondary: #E5E9F0;
+                --accent-frost: #88C0D0;
+                --link-color: #88C0D0;
+                --link-hover: #8FBCBB;
+            }
+        }
 
-		body {
-			margin: 0;
-			padding: 40px 20px;
-			background-color: var(--bg-color);
-			background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
-			font-family: 'Inter', -apple-system, sans-serif;
-			color: var(--text-color);
-			display: flex;
-			justify-content: center;
-		}
+        /* 2. BASE STYLES */
+        body {
+            font-family: 'Source Serif 4', Georgia, serif; /* Gleiche Font wie Hauptseite */
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            transition: background-color 0.3s ease;
+        }
 
-		.wrapper {
-			width: 100%;
-			max-width: 450px;
-			text-align: center;
-		}
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
 
-		/* Profilbild-Animation */
-		.profile-pic {
-			width: 96px;
-			height: 96px;
-			border-radius: 50%;
-			border: 3px solid rgba(255, 255, 255, 0.2);
-			margin-bottom: 16px;
-			transition: transform 0.3s ease;
-		}
-		.profile-pic:hover { transform: rotate(5deg) scale(1.05); }
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-frost);
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
 
-		/* Die Buttons */
-		.link-btn {
-			display: block;
-			padding: 16px;
-			margin-bottom: 16px;
-			border-radius: 16px;
-			text-decoration: none;
-			color: white;
-			font-weight: 600;
-			background: rgba(255, 255, 255, 0.05); /* Glass-Look */
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			backdrop-filter: blur(10px);
-			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
 
-			/* Animation beim Laden */
-			opacity: 0;
-			transform: translateY(20px);
-			animation: fadeInUp 0.5s forwards;
-		}
+        .description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
 
-		.link-btn:hover {
-			background: rgba(255, 255, 255, 0.15);
-			transform: translateY(-4px) scale(1.02);
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-			border-color: rgba(255, 255, 255, 0.4);
-		}
+        /* 3. BUTTONS (Nord-Style) */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-		/* Keyframes für das "Einfliegen" der Buttons */
-		@keyframes fadeInUp {
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-	</style>
+        .link-card {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 1px solid var(--bg-tertiary);
+            transition: all 0.2s ease;
 
+            /* Animation-Startzustand */
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.5s forwards;
+        }
 
+        .link-card:hover {
+            background-color: var(--bg-tertiary);
+            border-color: var(--accent-frost);
+            transform: scale(1.02);
+            color: var(--link-color);
+        }
+
+        /* 4. FOOTER */
+        footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-	<div class="wrapper">
-		<img src="/assets/img/dein-bild.jpg" alt="Profile" class="profile-pic">
-		<h1>{{ site.title }}</h1>
-		<p style="opacity: 0.7; margin-bottom: 30px;">Mein digitaler Garten 🌿</p>
 
-		<div class="links">
-			{% for link in site.data.links %}
-				<a href="{{ link.url }}"
-				   class="link-btn"
-				   style="animation-delay: {{ forloop.index | times: 0.1 }}s; border-left: 4px solid {{ link.color | default: '#6366f1' }};">
-					{{ link.name }}
-				</a>
-			{% endfor %}
-		</div>
-	</div>
+    <div class="container">
+        <img src="{{ site.logo | relative_url }}" alt="Logo" class="profile-pic">
+        <h1>{{ site.title }}</h1>
+        <p class="description">{{ site.description }}</p>
+
+        <div class="links-container">
+            {% for link in site.data.links %}
+                <a href="{{ link.url }}"
+                   class="link-card"
+                   style="animation-delay: {{ forloop.index | times: 0.1 }}s">
+                    {{ link.name }}
+                </a>
+            {% endfor %}
+        </div>
+
+        <footer>
+            <a href="{{ '/' | relative_url }}">Haupseite</a>
+            <span class="separator">·</span>
+            <a href="/impressum">Impressum</a>
+            <span class="separator">·</span>
+            <a href="/datenschutz">Datenschutz</a>
+        </footer>
+    </div>
+
 </body>
 </html>
