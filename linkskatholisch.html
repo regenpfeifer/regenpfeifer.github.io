@@ -25,13 +25,13 @@ description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufent
 </head>
 
 <body>
-    <div class="container">
-        <img src="{{ site.logo | relative_url }}" alt="Logo" class="profile-pic">
-        <h1>{{ site.title }}</h1>
-        <p class="description">{{ site.description }}</p>
+<div class="container">
+    <img src="{{ profile.metadata.logo | default: site.logo | relative_url }}" alt="Logo" class="profile-pic">
+    <h1>{{ profile.metadata.title | default: site.title }}</h1>
+    <p class="description">{{ profile.metadata.description | default: site.description }}</p>
 
 		<div class="links-container">
-			{% for link in site.data.links %}
+			{% for link in profile.links %}
 				<a href="{{ link.url }}"
 				   class="link-card"
 				   target="_blank"
