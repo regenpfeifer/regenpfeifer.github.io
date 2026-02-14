@@ -12,157 +12,156 @@ permalink: /links/
 
     <title>Links | {{ site.title }}</title>
 
-    <style>
-        /* 1. VARIABLEN (Direkt aus deiner style.scss übernommen) */
-        :root {
-            --bg-primary: #ECEFF4;
-            --bg-secondary: #E5E9F0;
-            --bg-tertiary: #D8DEE9;
-            --text-primary: #2E3440;
-            --text-secondary: #3B4252;
-            --accent-frost: #5E81AC;
-            --link-color: #5E81AC;
-            --link-hover: #81A1C1;
-        }
+	<style>
+		/* 1. VARIABLEN */
+		:root {
+			--bg-primary: #ECEFF4;
+			--bg-secondary: #E5E9F0;
+			--bg-tertiary: #D8DEE9;
+			--text-primary: #2E3440;
+			--text-secondary: #3B4252;
+			--text-muted: #4C566A;
+			--accent-frost: #5E81AC;
+			--link-color: #5E81AC;
+			--link-hover: #81A1C1;
+		}
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-primary: #2E3440;
-                --bg-secondary: #3B4252;
-                --bg-tertiary: #434C5E;
-                --text-primary: #ECEFF4;
-                --text-secondary: #E5E9F0;
-                --accent-frost: #88C0D0;
-                --link-color: #88C0D0;
-                --link-hover: #8FBCBB;
-            }
-        }
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-primary: #2E3440;
+				--bg-secondary: #3B4252;
+				--bg-tertiary: #434C5E;
+				--text-primary: #ECEFF4;
+				--text-secondary: #E5E9F0;
+				--text-muted: #D8DEE9;
+				--accent-frost: #88C0D0;
+				--link-color: #88C0D0;
+				--link-hover: #8FBCBB;
+			}
+		}
 
-        /* 2. BASE STYLES */
-        body {
-            font-family: 'Source Serif 4', Georgia, serif; /* Gleiche Font wie Hauptseite */
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 450px;
-            text-align: center;
-        }
-
-        .profile-pic {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: 3px solid var(--accent-frost);
-            margin-bottom: 1rem;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-        }
-
-        /* 3. BUTTONS (Nord-Style) */
-
-        /* ANIMATION */
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .link-card {
-			/* Flexbox für Icon und Text nebeneinander */
+		/* 2. BASE STYLES */
+		body {
+			font-family: 'Source Serif 4', Georgia, serif;
+			background-color: var(--bg-primary);
+			color: var(--text-primary);
+			margin: 0;
 			display: flex;
-			align-items: center; /* Zentriert Icon und Text vertikal */
+			justify-content: center;
+			padding: 40px 20px;
+			transition: background-color 0.3s ease;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 450px;
+			text-align: center;
+		}
+
+		.profile-pic {
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			border: 3px solid var(--accent-frost);
+			margin-bottom: 1rem;
+			object-fit: cover;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+			color: var(--text-primary);
+		}
+
+		.description {
+			color: var(--text-secondary);
+			font-size: 0.95rem;
+			margin-bottom: 2rem;
+		}
+
+		/* 3. ANIMATION (Jetzt mit korrekten Klammern) */
+		@keyframes fadeIn {
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* 4. LINKS und BUTTONS */
+		.links-container {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		.link-card {
+			display: flex;
+			align-items: center;
 			background-color: var(--bg-secondary);
 			color: var(--text-primary);
 			text-decoration: none;
 			padding: 16px;
-			/* padding: 12px 16px; */     /* Etwas kompakteres Padding */
 			border-radius: 8px;
 			font-weight: 700;
 			border: 1px solid var(--bg-tertiary);
 			transition: all 0.2s ease;
 
-			/* Animation-Startzustand */
+			/* Startzustand für Animation */
 			opacity: 0;
 			transform: translateY(10px);
 			animation: fadeIn 0.5s forwards;
-        }
+		}
 
-        .link-card:hover {
-            background-color: var(--bg-tertiary);
-            border-color: var(--accent-frost);
-            transform: scale(1.02);
-            color: var(--link-color);
-        }
+		.link-card:hover {
+			background-color: var(--bg-tertiary);
+			border-color: var(--accent-frost);
+			transform: scale(1.02);
+			color: var(--link-color);
+		}
 
-        .link-icon {
-			/* Feste Größe für alle Icons */
+		.link-icon {
 			width: 24px;
 			height: 24px;
-
-			/* Verhindert Verzerrungen */
-			object-fit: contain;
-
-			/* Abstand zum Text */
 			margin-right: 16px;
-
-			/* Optional: Stellt sicher, dass das Icon nicht schrumpft */
 			flex-shrink: 0;
+			object-fit: contain;
+			/* Der Filter färbt die Icons ein. */
+			filter: invert(48%) sepia(18%) saturate(1185%) hue-rotate(177deg) brightness(93%) contrast(90%);
+			transition: filter 0.3s ease; /* Weicher Übergang beim Modus-Wechsel */
+		}
 
-			object-fit: contain;    /* Verhindert Verzerrungen */
-			/* Falls du SVGs nutzt, kannst du sie hier leicht filtern,
-			um sie an das Nord-Design anzupassen, falls nötig */
-			filter: brightness(0) saturate(100%) invert(20%) sepia(10%) saturate(1000%) hue-rotate(180deg);
+		@media (prefers-color-scheme: dark) {
+			.link-icon {
+				/* Dieser Filter wandelt schwarz/dunkel in das hellere Nord8 (#88C0D0) um */
+				filter: invert(76%) sepia(13%) saturate(913%) hue-rotate(149deg) brightness(92%) contrast(88%);
+			}
 		}
 
 		.link-text {
-			flex-grow: 1;           /* Der Text nimmt den restlichen Platz ein */
-			text-align: left;       /* Text linksbündig für besseren Lesefluss */
+			flex-grow: 1;
+			text-align: left;
 		}
 
+		/* 5. FOOTER */
+		footer {
+			margin-top: 3rem;
+			font-size: 0.85rem;
+			color: var(--text-muted);
+		}
 
-        /* 4. FOOTER */
-        footer {
-            margin-top: 3rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+		footer a {
+			color: var(--text-secondary);
+			text-decoration: none;
+			margin: 0 8px;
+		}
 
-        footer a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin: 0 8px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-   }
-    </style>
-
+		footer a:hover {
+			color: var(--accent-frost);
+			text-decoration: underline;
+		}
+	</style>
 </head>
+
 <body>
 
     <div class="container">
