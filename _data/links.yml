@@ -1,9 +1,29 @@
-- name: "Mein Portfolio"
-  url: "https://deinname.de"
-  color: "#ff5733" # Optional: Eigene Farbe pro Button
-- name: "Instagram"
-  url: "https://instagram.com/deinname"
-- name: "Neuester Blogpost"
-  url: "/blog/mein-artikel"
-- name: "Kontakt"
-  url: "mailto:hallo@domain.de"
+- name: "Sudelbuch"
+  url: "https://regenpfeifer.net"
+  icon: "/assets/icons/home02.svg"
+  color: "#88C0D0" # Nord8
+
+- name: "Telegrafenamt"
+  url: "https://social.regenpfeifer.net"
+  icon: "/assets/icons/mastodon02.svg"
+  color: "#A3BE8C" # Nord14 (Grünlich)
+
+- name: "Lichtbildarchiv"
+  url: "https://pics.regenpfeifer.net"
+  icon: "/assets/icons/pixelfed02.svg"
+  color: "#BF616A" # Nord11 (Rötlich)
+
+- name: "BookWyrm"
+  url: "https://books.regenpfeifer.net"
+  icon: "/assets/icons/bookwyrm.svg"
+  color: "#BF616A" # Nord11 (Rötlich)
+
+- name: "eBird"
+  url: "https://pics.regenpfeifer.net"
+  icon: "/assets/icons/ebird.svg"
+  color: "#BF616A" # Nord11 (Rötlich)
+
+- name: "iNaturalist"
+  url: "https://pics.regenpfeifer.net"
+  icon: "/assets/icons/inaturalist02.svg"
+  color: "#BF616A" # Nord11 (Rötlich)
