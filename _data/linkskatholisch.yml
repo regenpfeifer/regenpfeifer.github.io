@@ -8,17 +8,17 @@ metadata:
 links:
 - name: "Texte"
   url: "https://linkskatholisch.de"
-  icon: "/assets/icons/home02.svg"
+  icon: "/assets/icons/home.svg"
   color: "#D08770" # Nord12 (Orange)
 
 - name: "Kurznachrichten"
   url: "https://social.regenpfeifer.net/@linkskatholisch"
-  icon: "/assets/icons/mastodon02.svg"
+  icon: "/assets/icons/mastodon.svg"
   color: "#B48EAD" # Nord15 (Violett)
 
 - name: "Fotos"
   url: "https://pics.regenpfeifer.net/@linkskatholisch"
-  icon: "/assets/icons/pixelfed02.svg"
+  icon: "/assets/icons/pixelfed.svg"
   color: "#88C0D0" # Nord8 (Türkis)
 
 - name: "Kontakt"
