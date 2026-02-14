@@ -4,7 +4,7 @@ permalink: /bavarianbirds/
 title: "Bavarianbirds | Linktree"
 description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufenthalten draußen in der Natur""
 ---
-<!DOCTYPE html>
+{% assign profile = site.data.bavarianbirds %} <!DOCTYPE html>
 <html lang="{{ site.lang | default: "de" }}">
 
 <head>
@@ -38,7 +38,7 @@ description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufent
     <p class="description">{{ profile.metadata.description | default: site.description }}</p>
 
 		<div class="links-container">
-			{% for link in site.data.links %}
+			{% for link in profile.links %}
 				<a href="{{ link.url }}"
 				   class="link-card"
 				   target="_blank"
