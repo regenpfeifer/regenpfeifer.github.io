@@ -97,6 +97,7 @@ permalink: /links/
 		.link-card {
 			display: flex;
 			align-items: center;
+			justify-content: center;
 			background-color: var(--bg-secondary);
 			color: var(--text-primary);
 			text-decoration: none;
@@ -120,9 +121,9 @@ permalink: /links/
 		}
 
 		.link-icon {
-			width: 24px;
-			height: 24px;
-			margin-right: 16px;
+			width: 20px;
+			height: 20px;
+			margin-right: 12px;
 			flex-shrink: 0;
 			object-fit: contain;
 			/* Der Filter färbt die Icons ein. */
@@ -138,8 +139,14 @@ permalink: /links/
 		}
 
 		.link-text {
-			flex-grow: 1;
-			text-align: left;
+			flex-grow: 0;
+			text-align: center;
+
+			/* SCHRIFT-STYLING */
+			text-transform: uppercase; /* Alles in Großbuchstaben */
+			font-variant: small-caps;   /* Echte Kapitälchen (wenn vom Font unterstützt) */
+			letter-spacing: 0.12em;     /* WICHTIG: Erhöhter Laufweite für bessere Lesbarkeit bei Großbuchstaben */
+			font-weight: 700;
 		}
 
 		/* 5. FOOTER */
