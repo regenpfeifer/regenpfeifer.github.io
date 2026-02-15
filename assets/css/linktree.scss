@@ -2,16 +2,24 @@
 ---
 
 /* ============================================
+   BORDER FIX
+   ============================================ */
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ============================================
    FONTS IMPORT
    ============================================ */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&display=swap");
 
-
+/* 1. VARIABLEN */
 /* ============================================
    NORD COLOR PALETTE
    ============================================ */
-
-/* 1. VARIABLEN */
 :root {
   --bg-primary: #eceff4;
   --bg-secondary: #e5e9f0;
@@ -39,6 +47,12 @@
 }
 
 /* 2. BASE STYLES */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: "Literata", serif; /* Hauptschriftart */
   background-color: var(--bg-primary);
