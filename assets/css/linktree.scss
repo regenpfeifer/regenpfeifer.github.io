@@ -104,7 +104,7 @@ h1 {
 
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeIn 0.5s ease forwards; /* 'ease' hinzugefügt */
+  animation: fadeIn 0.5s ease forwards;
 }
 
 /* Staggered Animation Delay */
@@ -220,7 +220,7 @@ footer nav a {
   width: 130px;
   height: 130px;
   border-radius: 8px;
-  /* Im Dark Mode invertieren wir den Code leicht für bessere Lesbarkeit */
+  /* Im Dark Mode den Code leicht invertieren für bessere Lesbarkeit */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -233,7 +233,6 @@ footer nav a {
 }
 
 /* 5. Standardseiten _default.html */
-
 .content-wrapper {
   width: 100%;
   max-width: 800px;
@@ -283,10 +282,7 @@ header {
 }
 
 .content-body h1 {
-  /* border-bottom: 1px solid var(--bg-tertiary); */
-  /* margin-bottom: 30px; */
   font-size: 1.4rem;
-  /* font-weight: 700; */
   margin-bottom: 0.5rem;
   padding-bottom: 10px;
 }
