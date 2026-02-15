@@ -51,7 +51,7 @@ show_downloads: false
 datenschutz: false  # auf true setzen, wenn du /datenschutz.md erstellst
 
 # ============================================
-# PLUGINS (optional)
+# PLUGINS
 # ============================================
 
 plugins:
@@ -59,7 +59,7 @@ plugins:
   - jekyll-sitemap  # Erstellt automatisch sitemap.xml
 
 # ============================================
-# WEBMASTER TOOLS (optional)
+# WEBMASTER TOOLS (Sitemap etc.)
 # ============================================
 
 # Auskommentiert lassen, wenn nicht benötigt
@@ -68,6 +68,11 @@ google-site-verification: JujF0Qkw4SWP6YljEomN4RV3vBjUif3FMGm3bJi8uf8
 
 url: "https://regenpfeifer.github.io"
 baseurl: ""
+
+sitemap:
+  exclude:
+    - "/assets/fonts/fonts.html"
+    - "/google5cbda2d5ab16cfaa.html"
 
 # ============================================
 # BUILD SETTINGS
