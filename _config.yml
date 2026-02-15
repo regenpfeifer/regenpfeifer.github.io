@@ -20,7 +20,7 @@ title: »Regenpfeifer«
 description: Philosophie & Theologie, Literatur, Naturkunde, Politik & Gesellschaft
 
 # Logo / Avatar
-logo: /assets/img/avatar.jpg
+logo: /assets/img/regenpfeifer.jpg
 
 # Autor (optional, gut für SEO)
 author:
@@ -65,6 +65,9 @@ plugins:
 # Auskommentiert lassen, wenn nicht benötigt
 # webmaster_verifications:
 google-site-verification: JujF0Qkw4SWP6YljEomN4RV3vBjUif3FMGm3bJi8uf8
+
+url: "https://regenpfeifer.github.io"
+baseurl: ""
 
 # ============================================
 # BUILD SETTINGS
