@@ -1,90 +1,85 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "de" }}">
+<html lang="{{ site.lang | default: 'de' }}">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- SEO -->
     {% seo %}
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/linktree.css?v=" | append: site.github.build_revision | relative_url }}">
 
-    {% include head-custom.html %}
+    <link rel="icon" type="image/png" href="{{ '/assets/img/favicon/favicon-96x96.png' | relative_url }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon/favicon.svg' | relative_url }}" />
+    <link rel="shortcut icon" href="{{ '/assets/img/favicon/favicon.ico' | relative_url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}" />
+    <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}" />
 
-  <link rel="shortcut icon" type="image/png" href="/favicon.png?">
-  </head>
-  <body>
-    <div class="wrapper">
+    <style>
+        /* Spezifische Anpassungen für Inhaltsseiten (Markdown) */
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: left; /* Fließtext linksbündig für bessere Lesbarkeit */
+        }
+        .content-body {
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+        .content-body h1, .content-body h2, .content-body h3 {
+            color: var(--accent-frost);
+            margin-top: 1.5em;
+        }
+        .content-body a {
+            color: var(--accent-frost);
+            text-decoration: underline;
+        }
+        .back-home {
+            display: inline-block;
+            margin-bottom: 30px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+        }
+        .back-home:hover {
+            color: var(--accent-frost);
+        }
+    </style>
+</head>
 
-      <!-- HEADER / SIDEBAR -->
-      <header>
-        <div class="header-content">
-          {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} Logo" class="site-logo" />
-          {% endif %}
+<body>
+    <div class="container">
+        <div class="content-wrapper">
 
-          <h1 class="site-title">
-            <a href="{{ "/" | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
-          </h1>
+            <header>
+                <a href="{{ "/" | relative_url }}" class="back-home">← Zurück zur Übersicht</a>
+                {% if site.logo %}
+                    <img src="{{ site.logo | relative_url }}" alt="Logo" class="profile-pic" style="width: 80px; height: 80px; margin-bottom: 20px;">
+                {% endif %}
+            </header>
 
-          {% if site.description %}
-            <p class="site-description">{{ site.description | default: site.github.project_tagline }}</p>
-          {% endif %}
-            <hr>
-            <h4>Weitere Webseiten</h4>
+            <main class="content-body" role="main">
+                {{ content }}
+            </main>
+
+            <footer style="margin-top: 50px; border-top: 1px solid var(--bg-tertiary); padding-top: 20px;">
+                <nav>
+                    <a href="{{ "/" | relative_url }}">Home</a>
+                    <span class="separator">·</span>
+                    <a href="{{ "/impressum" | relative_url }}">Impressum</a>
+                    {% if site.github.repository_url %}
+                        <span class="separator">·</span>
+                        <a href="{{ site.github.repository_url }}">GitHub</a>
+                    {% endif %}
+                </nav>
+            </footer>
+
         </div>
-
-        <!-- NAVIGATION -->
-        {% if site.my_links %}
-          <nav class="main-nav" aria-label="Hauptnavigation">
-            <ul>
-              {% for link in site.my_links %}
-                <li>
-                  <a href="{{ link.url }}" {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-                    {{ link.title }}
-                    {% if link.external %}<span class="external-icon" aria-label="Externer Link">↗</span>{% endif %}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-        {% endif %}
-
-        <!-- Optional: GitHub Downloads -->
-        {% if site.show_downloads %}
-          <div class="downloads">
-            <h3>Downloads</h3>
-            <ul>
-              <li><a href="{{ site.github.zip_url }}">ZIP File</a></li>
-              <li><a href="{{ site.github.tar_url }}">TAR Ball</a></li>
-              <li><a href="{{ site.github.repository_url }}">GitHub Repository</a></li>
-            </ul>
-          </div>
-        {% endif %}
-      </header>
-
-      <!-- MAIN CONTENT -->
-      <main role="main">
-        {{ content }}
-      </main>
-
-      <!-- FOOTER -->
-      <footer>
-        <nav class="footer-nav" aria-label="Footer Navigation">
-          <a href="{{ "/impressum" | relative_url }}">Impressum</a>
-          {% if site.datenschutz %}
-            <span class="separator">•</span>
-            <a href="{{ "/datenschutz" | relative_url }}">Datenschutz</a>
-          {% endif %}
-        </nav>
-      </footer>
-
     </div>
 
-    <!-- Scripts -->
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+</body>
 </html>
