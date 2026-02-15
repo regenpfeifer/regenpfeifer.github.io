@@ -64,8 +64,7 @@ plugins:
 
 # Auskommentiert lassen, wenn nicht benötigt
 # webmaster_verifications:
-# google: mXS5h7mTkg544TxzsZu4JQKVSpODP6QAMhj9498WStQ
-google_site_verification: mXS5h7mTkg544TxzsZu4JQKVSpODP6QAMhj9498WStQ
+google-site-verification: JujF0Qkw4SWP6YljEomN4RV3vBjUif3FMGm3bJi8uf8
 
 # ============================================
 # BUILD SETTINGS
