@@ -12,8 +12,6 @@ image: "/assets/img/bavarianbirds.jpg"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO
-    {% seo %} -->
     {% capture seo_tags %}{% seo %}{% endcapture %}
     {{ seo_tags | split: '<title>' | first }}
     {{ seo_tags | split: '</title>' | last }}
