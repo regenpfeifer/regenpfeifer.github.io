@@ -2,8 +2,6 @@
 layout: null
 permalink: /bavarianbirds/
 title: "Bavarianbirds"
-seo:
-  site_title: "Erlebnisse bei der Vogelbeobachtung..."
 description: "Erlebnisse bei der Vogelbeobachtung, bei Spaziergängen und Aufenthalten draußen in der Natur."
 image: "/assets/img/bavarianbirds.jpg"
 ---
@@ -14,8 +12,13 @@ image: "/assets/img/bavarianbirds.jpg"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    {% seo %}
+    <!-- SEO
+    {% seo %} -->
+    {% capture seo_tags %}{% seo %}{% endcapture %}
+    {{ seo_tags | split: '<title>' | first }}
+    {{ seo_tags | split: '</title>' | last }}
+
+    <title>{{ profile.metadata.title }} | {{ profile.metadata.description }}</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ "/assets/css/linktree.css?v=" | append: site.github.build_revision | relative_url }}">
