@@ -4,7 +4,8 @@
 /* ============================================
    FONTS IMPORT
    ============================================ */
-   @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&display=swap");
+
 
 /* ============================================
    NORD COLOR PALETTE
@@ -25,15 +26,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-	--bg-primary: #2e3440;
-	--bg-secondary: #3b4252;
-	--bg-tertiary: #434c5e;
-	--text-primary: #eceff4;
-	--text-secondary: #e5e9f0;
-	--text-muted: #d8dee9;
-	--accent-frost: #88c0d0;
-	--link-color: #88c0d0;
-	--link-hover: #8fbcbb;
+    --bg-primary: #2e3440;
+    --bg-secondary: #3b4252;
+    --bg-tertiary: #434c5e;
+    --text-primary: #eceff4;
+    --text-secondary: #e5e9f0;
+    --text-muted: #d8dee9;
+    --accent-frost: #88c0d0;
+    --link-color: #88c0d0;
+    --link-hover: #8fbcbb;
   }
 }
 
@@ -44,7 +45,6 @@ body {
   color: var(--text-primary);
   margin: 0;
   display: flex;
-  flex-direction: column; /* Wichtig für Unterseiten */
   justify-content: center;
   padding: 40px 20px;
   transition: background-color 0.3s ease;
@@ -58,22 +58,22 @@ body {
 
 /* Ergänzung für Logo und Beschreibung */
 .profile-pic {
-	width: 100px;          /* Festgelegte Breite */
-	height: 100px;         /* Festgelegte Höhe */
-	border-radius: 50%;    /* Macht das Bild rund */
-	object-fit: cover;     /* Sorgt dafür, dass das Bild nicht verzerrt wird */
-	border: 3px solid var(--accent-frost); /* Der blaue Nord-Rahmen */
-	margin-bottom: 1.5rem;
-	margin-top: 1rem;
+  width: 100px; /* Festgelegte Breite */
+  height: 100px; /* Festgelegte Höhe */
+  border-radius: 50%; /* Macht das Bild rund */
+  object-fit: cover; /* Sorgt dafür, dass das Bild nicht verzerrt wird */
+  border: 3px solid var(--accent-frost); /* Der blaue Nord-Rahmen */
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .description {
-	font-family: 'Literata', serif;
-	color: var(--text-secondary);
-	font-size: 1rem;
-	margin-bottom: 2.5rem;
-	font-style: italic;    /* Passt gut zum Literata-Stil */
-	line-height: 1.4;
+  font-family: "Literata", serif;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  font-style: italic; /* Passt gut zum Literata-Stil */
+  line-height: 1.4;
 }
 
 h1 {
@@ -108,10 +108,27 @@ h1 {
 }
 
 /* Staggered Animation Delay */
-.link-card:nth-child(1) { animation-delay: 0.05s; }
-.link-card:nth-child(2) { animation-delay: 0.15s; }
-.link-card:nth-child(3) { animation-delay: 0.25s; }
-.link-card:nth-child(4) { animation-delay: 0.35s; }
+.link-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.link-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.link-card:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.link-card:nth-child(4) {
+  animation-delay: 0.35s;
+}
+.link-card:nth-child(5) {
+  animation-delay: 0.45s;
+}
+.link-card:nth-child(6) {
+  animation-delay: 0.55s;
+}
+.link-card:nth-child(7) {
+  animation-delay: 0.5s;
+}
 
 .link-text {
   font-family: "IBM Plex Sans", sans-serif; /* Button-Schriftart */
@@ -130,13 +147,13 @@ h1 {
   object-fit: contain;
   /* Nord-Filter */
   filter: invert(48%) sepia(18%) saturate(1185%) hue-rotate(177deg)
-	brightness(93%) contrast(90%);
+    brightness(93%) contrast(90%);
 }
 
 @media (prefers-color-scheme: dark) {
   .link-icon {
-	filter: invert(76%) sepia(13%) saturate(913%) hue-rotate(149deg)
-	  brightness(92%) contrast(88%);
+    filter: invert(76%) sepia(13%) saturate(913%) hue-rotate(149deg)
+      brightness(92%) contrast(88%);
   }
 }
 
@@ -149,142 +166,142 @@ h1 {
 /* ANIMATION & FOOTER */
 @keyframes fadeIn {
   to {
-	opacity: 1;
-	transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 footer {
-  margin-top: 3rem;
-  font-size: 0.85rem;
   color: var(--text-muted);
+  margin-top: auto;
+  padding-top: 60px;
+  padding-top: 30px;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
 }
+
 footer a {
   color: var(--text-secondary);
   text-decoration: none;
   margin: 0 8px;
+  transition: color 0.2s ease;
+}
+
+footer nav a {
+  margin: 0 10px;
+}
+
+.content-wrapper footer {
+  border-top: 1px solid var(--bg-tertiary);
 }
 
 /* 4. QR-CODE */
 .qr-section {
-    margin-top: 2.5rem;
-    padding: 20px;
-    background-color: var(--bg-secondary);
-    border-radius: 16px;
-    border: 1px dashed var(--bg-tertiary);
-    display: inline-block;
+  margin-top: 2.5rem;
+  padding: 20px;
+  background-color: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px dashed var(--bg-tertiary);
+  display: inline-block;
 }
 
 .qr-text {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
-    color: var(--text-secondary);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
 }
 
 .qr-code {
-    width: 130px;
-    height: 130px;
-    border-radius: 8px;
-    /* Im Dark Mode invertieren wir den Code leicht für bessere Lesbarkeit */
+  width: 130px;
+  height: 130px;
+  border-radius: 8px;
+  /* Im Dark Mode invertieren wir den Code leicht für bessere Lesbarkeit */
 }
 
 @media (prefers-color-scheme: dark) {
-    .qr-section {
-        background-color: var(--bg-tertiary);
-    }
-    .qr-code {
-        border: 8px solid white; /* Weißer Rand hilft Scannern im Dark Mode */
-    }
+  .qr-section {
+    background-color: var(--bg-tertiary);
+  }
+  .qr-code {
+    border: 8px solid white; /* Weißer Rand hilft Scannern im Dark Mode */
+  }
 }
-
 
 /* 5. Standardseiten _default.html */
 
-        .content-wrapper {
-			width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+.content-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
-        /* Header & Navigation zentrieren */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+/* Header & Navigation zentrieren */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-        .back-home {
-            display: block; /* Block für einfache Zentrierung */
-            margin-bottom: 20px;
-            font-family: 'IBM Plex Sans', sans-serif;
-            font-size: 0.85rem;
-            text-decoration: none;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+.back-home {
+  display: block; /* Block für einfache Zentrierung */
+  margin-bottom: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
-        .back-home:hover {
-            color: var(--accent-frost);
-        }
+.back-home:hover {
+  color: var(--accent-frost);
+}
 
-        .global-title {
-            font-family: 'Literata', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 15px 0 5px 0;
-            color: var(--text-primary);
-        }
+.global-title {
+  font-family: "Literata", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 15px 0 5px 0;
+  color: var(--text-primary);
+}
 
-        .global-title a {
-            text-decoration: none;
-            color: inherit;
-        }
+.global-title a {
+  text-decoration: none;
+  color: inherit;
+}
 
-        /* Inhaltsbereich */
-        .content-body {
-            line-height: 1.7;
-            color: var(--text-primary);
-            text-align: left; /* Fließtext bleibt für Lesbarkeit links */
-        }
+/* Inhaltsbereich */
+.content-body {
+  line-height: 1.7;
+  color: var(--text-primary);
+  text-align: left; /* Fließtext bleibt für Lesbarkeit links */
+}
 
-        .content-body h1 {
-            /* border-bottom: 1px solid var(--bg-tertiary); */
-            /* margin-bottom: 30px; */
-			font-size: 1.4rem;
-            /* font-weight: 700; */
-			margin-bottom: 0.5rem;
-            padding-bottom: 10px;
-        }
+.content-body h1 {
+  /* border-bottom: 1px solid var(--bg-tertiary); */
+  /* margin-bottom: 30px; */
+  font-size: 1.4rem;
+  /* font-weight: 700; */
+  margin-bottom: 0.5rem;
+  padding-bottom: 10px;
+}
 
-        .content-body h2 {
-			font-size: 1.2rem;
-		}
+.content-body h2 {
+  font-size: 1.2rem;
+}
 
-        .content-body h1, .content-body h2, .content-body h3 {
-            color: var(--accent-frost);
-        }
+.content-body h1,
+.content-body h2,
+.content-body h3 {
+  color: var(--accent-frost);
+}
 
-        .content-body a {
-            color: var(--accent-frost);
-            text-decoration: underline;
-        }
-
-        /* Footer zentrieren */
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid var(--bg-tertiary);
-            /* font-family: 'IBM Plex Sans', sans-serif; */
-            font-size: 0.9rem;
-        }
-
-        footer nav a {
-            margin: 0 10px;
-        }
-
-
+.content-body a {
+  color: var(--accent-frost);
+  text-decoration: underline;
+}
