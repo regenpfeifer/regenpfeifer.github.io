@@ -50,6 +50,14 @@ show_downloads: false
 # Datenschutz-Seite vorhanden? (für Footer-Link)
 datenschutz: false  # auf true setzen, wenn du /datenschutz.md erstellst
 
+# Social Media Profile (für jekyll-seo-tag)
+social:
+  name: "Rechenheft"
+  links:
+    - https://social.regenpfeifer.net/@charadrius
+    - https://social.regenpfeifer.net/@bavarianbirds
+    - https://social.regenpfeifer.net/@linkskatholisch
+
 # ============================================
 # PLUGINS
 # ============================================
