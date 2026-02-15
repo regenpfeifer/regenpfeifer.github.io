@@ -2,8 +2,6 @@
 layout: null
 permalink: /linkskatholisch/
 title: "Linkskatholisch"
-seo:
-  site_title: "Glaube und Vernunft..."
 description: "Glaube und Vernunft: Theologie, Spiritualität, Predigten."
 image: "/assets/img/linkskatholisch.jpg"
 ---
@@ -14,8 +12,11 @@ image: "/assets/img/linkskatholisch.jpg"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    {% seo %}
+     {% capture seo_tags %}{% seo %}{% endcapture %}
+    {{ seo_tags | split: '<title>' | first }}
+    {{ seo_tags | split: '</title>' | last }}
+
+    <title>{{ profile.metadata.title }} | {{ profile.metadata.description }}</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ "/assets/css/linktree.css?v=" | append: site.github.build_revision | relative_url }}">
