@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /robots.txt
+---
+User-agent: *
+Allow: /
+
+# Hier die URL zu deiner Sitemap angeben
+Sitemap: {{ site.url }}/sitemap.xml
