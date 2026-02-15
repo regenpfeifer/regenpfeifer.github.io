@@ -17,35 +17,79 @@
     <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}" />
 
     <style>
-        /* Spezifische Anpassungen für Inhaltsseiten (Markdown) */
         .content-wrapper {
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-            text-align: left; /* Fließtext linksbündig für bessere Lesbarkeit */
         }
-        .content-body {
-            line-height: 1.6;
+
+        /* Header & Navigation zentrieren */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .back-home {
+            display: block; /* Block für einfache Zentrierung */
+            margin-bottom: 20px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .back-home:hover {
+            color: var(--accent-frost);
+        }
+
+        .global-title {
+            font-family: 'Literata', serif;
+            font-size: 1.8rem;
+            margin: 15px 0 5px 0;
             color: var(--text-primary);
         }
+
+        .global-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Inhaltsbereich */
+        .content-body {
+            line-height: 1.7;
+            color: var(--text-primary);
+            text-align: left; /* Fließtext bleibt für Lesbarkeit links */
+        }
+
+        .content-body h1 {
+            border-bottom: 1px solid var(--bg-tertiary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
         .content-body h1, .content-body h2, .content-body h3 {
             color: var(--accent-frost);
-            margin-top: 1.5em;
         }
+
         .content-body a {
             color: var(--accent-frost);
             text-decoration: underline;
         }
-        .back-home {
-            display: inline-block;
-            margin-bottom: 30px;
+
+        /* Footer zentrieren */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--bg-tertiary);
             font-family: 'IBM Plex Sans', sans-serif;
             font-size: 0.9rem;
-            text-decoration: none;
-            color: var(--text-secondary);
         }
-        .back-home:hover {
-            color: var(--accent-frost);
+
+        footer nav a {
+            margin: 0 10px;
         }
     </style>
 </head>
@@ -56,16 +100,23 @@
 
             <header>
                 <a href="{{ "/" | relative_url }}" class="back-home">← Zurück zur Übersicht</a>
+
                 {% if site.logo %}
-                    <img src="{{ site.logo | relative_url }}" alt="Logo" class="profile-pic" style="width: 80px; height: 80px; margin-bottom: 20px;">
+                    <a href="{{ "/" | relative_url }}">
+                        <img src="{{ site.logo | relative_url }}" alt="Logo" class="profile-pic" style="width: 70px; height: 70px; margin: 0 auto;">
+                    </a>
                 {% endif %}
+
+                <div class="global-title">
+                    <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+                </div>
             </header>
 
             <main class="content-body" role="main">
                 {{ content }}
             </main>
 
-            <footer style="margin-top: 50px; border-top: 1px solid var(--bg-tertiary); padding-top: 20px;">
+            <footer>
                 <nav>
                     <a href="{{ "/" | relative_url }}">Home</a>
                     <span class="separator">·</span>
