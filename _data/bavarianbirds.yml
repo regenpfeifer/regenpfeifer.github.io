@@ -19,7 +19,7 @@ links:
   - name: "Fotos"
     url: "https://pics.regenpfeifer.net/@bavarianbirds"
     icon: "/assets/icons/pixelfed.svg"
-    ccolor: "#88C0D0" # Nord8 (Türkis)
+    color: "#88C0D0" # Nord8 (Türkis)
 
   - name: "eBird"
     url: "https://regenpfeifer.net/ebird"
