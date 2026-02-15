@@ -38,7 +38,6 @@ image: "/assets/img/regenpfeifer.jpg"
 			{% for link in site.data.links %}
 				<a href="{{ link.url }}"
 				   class="link-card"
-				   target="_blank"
 				   {% if link.url contains '.vcf' %} download {% else %} target="_blank" rel="noopener" {% endif %}
 				   style="animation-delay: {{ forloop.index | times: 0.1 }}s; border-left: 4px solid {{ link.color | default: 'var(--accent-frost)' }};">
 

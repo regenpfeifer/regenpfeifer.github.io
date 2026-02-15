@@ -9,7 +9,7 @@ links:
   - name: "Blog"
     url: "https://regenpfeifer.net/natur"
     icon: "/assets/icons/home.svg"
-    ccolor: "#EBCB8B" # Nord13 (Gelb)
+    color: "#EBCB8B" # Nord13 (Gelb)
 
   - name: "Kurznachrichten"
     url: "https://social.regenpfeifer.net/@bavarianbirds"

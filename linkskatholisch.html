@@ -31,8 +31,8 @@ image: "/assets/img/linkskatholisch.jpg""
 
     <style>
     :root {
-        --accent-frost: "#D08770"
-        --link-color: "#D08770"
+        --accent-frost: #D08770;
+        --link-color: #D08770;
     }
 	</style>
 
@@ -48,7 +48,6 @@ image: "/assets/img/linkskatholisch.jpg""
 			{% for link in profile.links %}
 				<a href="{{ link.url }}"
 				   class="link-card"
-				   target="_blank"
 				   {% if link.url contains '.vcf' %} download {% else %} target="_blank" rel="noopener" {% endif %}
 				   style="animation-delay: {{ forloop.index | times: 0.1 }}s; border-left: 4px solid {{ link.color | default: 'var(--accent-frost)' }};">
 
