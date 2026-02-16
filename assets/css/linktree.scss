@@ -97,6 +97,12 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.container h1 {
+  font-family: 'IBM Plex Sans, sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 /* 3. BUTTONS & TYPOGRAFIE */
 .links-container {
   display: flex;
