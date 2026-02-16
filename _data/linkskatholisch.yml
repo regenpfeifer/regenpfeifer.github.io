@@ -24,12 +24,12 @@ links:
 - name: "LinkedIn"
   url: "https://www.linkedin.com/in/linkskatholisch/"
   icon: "/assets/icons/linkedin.svg"
-  color: "#88C0D0" # Nord8 (Türkis)
+  color: "#5E81AC" # Nord9 (Türkis)
 
 - name: "Uni Passau"
   url: "https://www.geku.uni-passau.de/dogmatische-theologie-und-theologische-gegenwartsfragen/lehrstuhlteam/"
   icon: "/assets/icons/academic.svg"
-  color: "#D08770" # Nord12 (Orange)
+  color: "#EBCB8B" # Nord13 (Gelb)
 
 - name: "Kontakt"
   url: "https://linkskatholisch.de/kontakt#Impressum"
