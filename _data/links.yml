@@ -18,6 +18,11 @@
   icon: "/assets/icons/books.svg"
   color: "#D08770" # Nord12 (Orange)
 
+- name: "Bavarianbirds"
+  url: "https://regenpfeifer.github.io/bavarianbirds/"
+  icon: "/assets/icons/inaturalist.svg"
+  color: "#A3BE8C" #Nord14 (Grün)
+
 - name: "Kontakt"
   url: "https://regenpfeifer.net/kontakt#impressum"
   icon: "/assets/icons/contact.svg"
