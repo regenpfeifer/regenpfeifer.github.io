@@ -124,10 +124,16 @@ h1 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .content-body h2 {
   font-size: 1.2rem;
+}
+
+.content-body h2,
+.content-body h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .content-body a {
@@ -314,7 +320,6 @@ header {
 }
 
 .global-title {
-  color: #A3BE8C;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
@@ -324,5 +329,6 @@ header {
 }
 
 .global-title a {
+  color: #A3BE8C;
   text-decoration: none;
 }
