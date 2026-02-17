@@ -51,7 +51,7 @@
 /* 2. BASE STYLES */
 html, body {
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: relative;
 }
 
@@ -97,8 +97,20 @@ body {
 }
 
 /* Inhaltsbereich */
-h1 {
+h1, h2, h3, .global-title {
   font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.content-body h1,
+.content-body h2,
+.content-body h3 {
+  color: var(--accent-frost);
+}
+
+
+h1 {
   font-weight: 700;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
@@ -110,22 +122,8 @@ h1 {
   text-align: left; /* Fließtext bleibt für Lesbarkeit links */
 }
 
-.container h1,
-.content-body h1,
-.content-body h2,
-.content-body h3 {
-  text-transform: uppercase;
-}
-
-.content-body h1,
-.content-body h2,
-.content-body h3 {
-  color: var(--accent-frost);
-}
-
 .content-body h1 {
   font-size: 1.4rem;
-  letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
   padding-bottom: 10px;
   text-align: center;
@@ -137,7 +135,6 @@ h1 {
 
 .content-body h2,
 .content-body h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
   letter-spacing: 0.05em;
 }
 
@@ -324,12 +321,9 @@ header {
 }
 
 .global-title {
-  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
   margin: 15px 0 5px 0;
-  text-transform: uppercase;
 }
 
 .global-title a {
