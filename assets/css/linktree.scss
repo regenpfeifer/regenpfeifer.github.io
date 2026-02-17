@@ -92,11 +92,18 @@ body {
   line-height: 1.4;
 }
 
+/* Inhaltsbereich */
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+}
+
+.content-body {
+  line-height: 1.7;
+  color: var(--text-primary);
+  text-align: left; /* Fließtext bleibt für Lesbarkeit links */
 }
 
 .container h1,
@@ -105,6 +112,27 @@ h1 {
 .content-body h3 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.content-body h1,
+.content-body h2,
+.content-body h3 {
+  color: var(--accent-frost);
+}
+
+.content-body h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 10px;
+}
+
+.content-body h2 {
+  font-size: 1.2rem;
+}
+
+.content-body a {
+  color: var(--accent-frost);
+  text-decoration: underline;
 }
 
 /* 3. BUTTONS & TYPOGRAFIE */
@@ -286,43 +314,15 @@ header {
 }
 
 .global-title {
-  font-family: "Literata", serif;
+  color: #A3BE8C;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
   margin: 15px 0 5px 0;
-  color: var(--text-primary);
+  text-transform: uppercase;
 }
 
 .global-title a {
   text-decoration: none;
-  color: #A3BE8C;
-  text-transform: uppercase;
-}
-
-/* Inhaltsbereich */
-.content-body {
-  line-height: 1.7;
-  color: var(--text-primary);
-  text-align: left; /* Fließtext bleibt für Lesbarkeit links */
-}
-
-.content-body h1 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 10px;
-}
-
-.content-body h2 {
-  font-size: 1.2rem;
-}
-
-.content-body h1,
-.content-body h2,
-.content-body h3 {
-  color: var(--accent-frost);
-}
-
-.content-body a {
-  color: var(--accent-frost);
-  text-decoration: underline;
 }
