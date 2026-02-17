@@ -17,6 +17,8 @@ image: "/assets/img/linkskatholisch.jpg"
     {{ seo_tags | split: '</title>' | last }}
 
     <title>{{ profile.metadata.title }} | {{ profile.metadata.description }}</title>
+    <link rel="preload" href="/fonts/literata-v40-greek_greek-ext-latin-latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/ibm-plex-sans-v23-greek-latin-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ "/assets/css/linktree.css?v=" | append: site.github.build_revision | relative_url }}">
