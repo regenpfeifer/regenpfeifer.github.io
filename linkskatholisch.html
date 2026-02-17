@@ -50,10 +50,11 @@ image: "/assets/img/linkskatholisch.jpg"
 </head>
 
 <body>
-<div class="container">
-    <img src="{{ profile.metadata.logo | default: site.logo | relative_url }}" alt="Logo" class="profile-pic">
-    <h1>{{ profile.metadata.title | default: site.title }}</h1>
-    <p class="description">{{ profile.metadata.description | default: site.description }}</p>
+<main>
+	<div class="container">
+		<img src="{{ profile.metadata.logo | default: site.logo | relative_url }}" alt="Logo" class="profile-pic">
+		<h1>{{ profile.metadata.title | default: site.title }}</h1>
+		<p class="description">{{ profile.metadata.description | default: site.description }}</p>
 
 		<div class="links-container">
 			{% for link in profile.links %}
@@ -79,12 +80,13 @@ image: "/assets/img/linkskatholisch.jpg"
 			</a>
 		</div>
 		-->
-        <footer>
-            <a href="/github">Github</a>
-            <span class="separator">·</span>
-            <a href="/impressum">Impressum</a>
-        </footer>
-    </div>
+		<footer>
+			<a href="/github">Github</a>
+			<span class="separator">·</span>
+			<a href="/impressum">Impressum</a>
+		</footer>
+	</div>
+</main>
 </body>
 
 </html>
