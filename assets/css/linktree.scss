@@ -101,13 +101,10 @@ h1 {
 
 .container h1,
 .content-body h1,
-.content-body h2 {
+.content-body h2,
+.content-body h3 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
-
-.content-body h1 {
-  color: #A3BE8C;
 }
 
 /* 3. BUTTONS & TYPOGRAFIE */
@@ -298,7 +295,8 @@ header {
 
 .global-title a {
   text-decoration: none;
-  color: inherit;
+  color: #A3BE8C;
+  text-transform: uppercase;
 }
 
 /* Inhaltsbereich */
