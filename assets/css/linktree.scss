@@ -93,16 +93,21 @@ body {
 }
 
 h1 {
-  font-family: "Literata", serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
-.container h1 {
-  font-family: 'IBM Plex Sans', sans-serif;
+.container h1,
+.content-body h1,
+.content-body h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.content-body h1 {
+  color: #A3BE8C;
 }
 
 /* 3. BUTTONS & TYPOGRAFIE */
