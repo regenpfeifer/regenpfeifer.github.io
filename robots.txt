@@ -2,7 +2,39 @@
 layout: null
 permalink: /robots.txt
 ---
-User-agent: *
-Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Gigabot
+Disallow: /
+
+User-agent: baiduspider
+Disallow: /
+
 
 Sitemap: https://regenpfeifer.github.io/sitemap.xml
